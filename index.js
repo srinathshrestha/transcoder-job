@@ -36,7 +36,7 @@ functions.cloudEvent('transcodeOnUpload', async (cloudEvent) => {
                   widthPixels: 640,
                   bitrateBps: 400000,
                   frameRate: 30,
-                  gopDuration: '2s', // Keyframe interval for segmentation
+                  gopDuration: { seconds: 2 }, // Keyframe interval for segmentation
                 },
               },
             },
@@ -48,7 +48,7 @@ functions.cloudEvent('transcodeOnUpload', async (cloudEvent) => {
                   widthPixels: 1280,
                   bitrateBps: 2500000,
                   frameRate: 30,
-                  gopDuration: '2s', // Keyframe interval for segmentation
+                  gopDuration: { seconds: 2 }, // Keyframe interval for segmentation
                 },
               },
             },
@@ -60,7 +60,7 @@ functions.cloudEvent('transcodeOnUpload', async (cloudEvent) => {
                   widthPixels: 1920,
                   bitrateBps: 5000000,
                   frameRate: 30,
-                  gopDuration: '2s', // Keyframe interval for segmentation
+                  gopDuration: { seconds: 2 }, // Keyframe interval for segmentation
                 },
               },
             },
