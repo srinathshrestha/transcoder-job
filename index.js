@@ -69,7 +69,9 @@ functions.cloudEvent('transcodeOnUpload', async (cloudEvent) => {
             fileName: '360p/segments/segment_%04d.ts',
             key: 'hls_360p',
             segmentSettings: {
-              segmentDuration: '6s',
+              segmentDuration: {
+                seconds: 6, // Corrected to an object
+              },
             },
           },
           {
@@ -78,7 +80,9 @@ functions.cloudEvent('transcodeOnUpload', async (cloudEvent) => {
             fileName: '720p/segments/segment_%04d.ts',
             key: 'hls_720p',
             segmentSettings: {
-              segmentDuration: '6s',
+              segmentDuration: {
+                seconds: 6, // Corrected to an object
+              },
             },
           },
           {
@@ -87,7 +91,9 @@ functions.cloudEvent('transcodeOnUpload', async (cloudEvent) => {
             fileName: '1080p/segments/segment_%04d.ts',
             key: 'hls_1080p',
             segmentSettings: {
-              segmentDuration: '6s',
+              segmentDuration: {
+                seconds: 6, // Corrected to an object
+              },
             },
           },
         ],
@@ -100,7 +106,7 @@ functions.cloudEvent('transcodeOnUpload', async (cloudEvent) => {
         ],
       },
     };
-
+    
     const [response] = await transcoderClient.createJob({ parent, job });
     console.log(`Job ${response.name} created for file ${file.name}`);
   } catch (error) {
