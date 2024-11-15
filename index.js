@@ -36,7 +36,7 @@ functions.cloudEvent('transcodeOnUpload', async (cloudEvent) => {
                 widthPixels: 640,
                 bitrateBps: 400000,
                 frameRate: 30,
-                gopDuration: '2s', // Keyframes every 2 seconds
+                gopDuration: { seconds: 2 } , // Keyframes every 2 seconds
                 gopMode: 'FIXED',  // Use fixed GOP mode for clean segmentation
                 profile: 'high',
                 preset: 'veryfast',
@@ -56,7 +56,7 @@ functions.cloudEvent('transcodeOnUpload', async (cloudEvent) => {
                 widthPixels: 1280,
                 bitrateBps: 2500000,
                 frameRate: 30,
-                gopDuration: '2s', // Keyframes every 2 seconds
+                gopDuration: { seconds: 2 }, // Keyframes every 2 seconds
                 gopMode: 'FIXED',
                 profile: 'high',
                 preset: 'veryfast',
@@ -76,7 +76,7 @@ functions.cloudEvent('transcodeOnUpload', async (cloudEvent) => {
                 widthPixels: 1920,
                 bitrateBps: 5000000,
                 frameRate: 30,
-                gopDuration: '2s', // Keyframes every 2 seconds
+                gopDuration: { seconds: 2 }, // Keyframes every 2 seconds
                 gopMode: 'FIXED',
                 profile: 'high',
                 preset: 'veryfast',
